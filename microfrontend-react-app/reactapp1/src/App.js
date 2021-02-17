@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import { AuthProvider } from "@microfrontend-react-app/shared-library";
+import Logged from "./Logged";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Context Provider</h1>
+      <h2>App 2</h2>
+      <AuthProvider.Provider value={{ isLogged: false }}>
+        <Logged />
+      </AuthProvider.Provider>
     </div>
   );
 }
