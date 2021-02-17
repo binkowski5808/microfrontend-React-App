@@ -1,6 +1,4 @@
 import React from "react";
-import "./App.css";
-
 import { AuthProvider } from "@microfrontend-react-app/shared-library";
 import Logged from "./Logged";
 
